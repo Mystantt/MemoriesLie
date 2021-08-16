@@ -4,5 +4,6 @@ using UnityEngine;
 
 public enum Difficulty
 {
-    Tutorial,Easy,Medium,Hard,VeryHard,Endless
+    Tutorial,Easy,Medium,Hard,VeryHard,
+    Endless //For later purposes
 }

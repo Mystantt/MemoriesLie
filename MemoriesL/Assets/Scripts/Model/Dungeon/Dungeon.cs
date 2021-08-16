@@ -8,11 +8,17 @@ using UnityEngine;
  */
 public class Dungeon
 {
-    private Difficulty Difficulty { get; }
+    public int NumberOfFloors { get; }
 
-    private List<DungeonStage> Stages { get;  }
+    public int CurrentLevel { get; }
 
-    private int CompletionRate { get; set; }
+    public DungeonFloor CurrentFloor { get; set; }
+
+    public Difficulty Difficulty { get; }
+
+    public List<DungeonStage> Stages { get;  }
+
+    public int CompletionRate { get; set; }
 
     public Dungeon(Difficulty d)
     {
@@ -35,6 +41,9 @@ public class Dungeon
         }
         CompletionRate = 0;
         Stages = new List<DungeonStage>(Algo.GenerateStages(numberofStages));
+        NumberOfFloors = numberofStages * Stages[0].NumberOfFloorsPerStage;
+        CurrentFloor = Stages[0].Floors[0];
+        CurrentLevel = 1;
     }
 
 
