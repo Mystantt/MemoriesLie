@@ -21,6 +21,7 @@ public static class Algo
         return result;
     }
 
+    //done
     internal static IEnumerable<DungeonFloor> GenerateFloors(int stage)
     {
         List<DungeonFloor> floors = new List<DungeonFloor>();
