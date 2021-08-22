@@ -40,7 +40,7 @@ public class Dungeon
                 break;
         }
         CompletionRate = 0;
-        Stages = new List<DungeonStage>(Algo.GenerateStages(numberofStages));
+        Stages = new List<DungeonStage>(GenerationAlgo.GenerateStages(numberofStages));
         NumberOfFloors = numberofStages * Stages[0].NumberOfFloorsPerStage;
         CurrentFloor = Stages[0].Floors[0];
         CurrentLevel = 1;

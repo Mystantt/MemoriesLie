@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public static class Algo
+public static class GenerationAlgo
 {
     //done
     internal static List<DungeonStage> GenerateStages(int numberofStages)
@@ -15,7 +15,7 @@ public static class Algo
             {
                 d = result[i - 1].Dimension;
             }
-                result.Add(Algo.GenerateStage(d));
+                result.Add(GenerationAlgo.GenerateStage(d));
      
         }
         return result;

@@ -11,7 +11,7 @@ public class DungeonStage
     {
 
         NumberOfFloorsPerStage = 5;
-        Floors = new List<DungeonFloor>(Algo.GenerateFloors(NumberOfFloorsPerStage));
+        Floors = new List<DungeonFloor>(GenerationAlgo.GenerateFloors(NumberOfFloorsPerStage));
         Dimension = d;
     }
 }
