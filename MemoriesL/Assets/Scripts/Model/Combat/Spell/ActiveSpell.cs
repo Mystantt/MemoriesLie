@@ -12,7 +12,7 @@ public class ActiveSpell : Spell
 
     public ActiveSpell(string name,string dsc,SpellElement sp, int cost,int cd, TargetMode tmod) : base(name, dsc, sp)
     {
-        if(cost > 0 && CD > 0)
+        if(cost > 0 && cd > 0)
         {
             Cost = cost;
             CD = cd;
