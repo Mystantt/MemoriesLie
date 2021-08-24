@@ -108,4 +108,16 @@ public static class GenerationAlgo
         Dungeon dungeon = new Dungeon(d);
         return dungeon;
     }
+
+    //tomodify
+    public static Hero GenerateHero()
+    {
+        Hero h = null;
+        List<Spell> l = new List<Spell>();
+        l.Add(new CureWounds());
+        l.Add(new Firebolt());
+        l.Add(new Slash());
+        h = new JeanPierre(l);
+        return h;
+    }
 }
