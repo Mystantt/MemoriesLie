@@ -53,6 +53,8 @@ public class FC : Character
     private List<Spell> _spells;
     public List<Spell> Spells { get => new List<Spell>(_spells); }
 
+    public Stats Stats { get; set; }
+
     public FC(string name,string dsc,int hp,int energy,List<Spell> sp) : base(name, dsc)
     {
         if(hp > 0 && energy > 0)
@@ -62,6 +64,7 @@ public class FC : Character
             MAXEN = energy;
             _energy = energy;
             _spells = new List<Spell>(sp);
+            Stats = new Stats();
         }
         else
         {
